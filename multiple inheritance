@@ -1,3 +1,6 @@
+//Q:7:Display the sum of two numbers using multiple inheritance where one number is declared in first base class and one number declared in second base class.Function is defined in the derived class to sum two numbers
+
+
 #include <iostream>
 using namespace std;
 
