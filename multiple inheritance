@@ -4,33 +4,32 @@
 #include <iostream>
 using namespace std;
 
-// First base class
+
 class Base1 {
 protected:
-    int num1; // First number
+    int num1; 
 
 public:
-    // Constructor to initialize num1
+    
     Base1(int a) : num1(a) {}
 };
 
-// Second base class
+
 class Base2 {
 protected:
-    int num2; // Second number
+    int num2; 
 
 public:
-    // Constructor to initialize num2
+    
     Base2(int b) : num2(b) {}
 };
 
-// Derived class
 class Derived : public Base1, public Base2 {
 public:
-    // Constructor to initialize both base classes
+    
     Derived(int a, int b) : Base1(a), Base2(b) {}
 
-    // Function to calculate and display the sum
+    
     void sum() {
         cout << "Sum of " << num1 << " and " << num2 << " is: " << (num1 + num2) << endl;
     }
@@ -41,10 +40,10 @@ int main() {
     cout << "Enter two numbers: ";
     cin >> a >> b;
 
-    // Create an object of the derived class
+    
     Derived obj(a, b);
 
-    // Call the sum function
+    
     obj.sum();
 
     return 0;
