@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+class NaturalNumbers {
+public:
+    NaturalNumbers(int n) {
+        int sum = 0;
+        for (int i = 1; i <= n; ++i) {
+            sum += i;
+        }
+        cout << "Sum of first " << n << " natural numbers is: " << sum << endl;
+    }
+};
+
+int main() {
+    int n;
+    cout << "Enter a positive integer: ";
+    cin >> n;
+
+    // Create an object of NaturalNumbers, which will compute the sum
+    NaturalNumbers obj(n);
+
+    return 0;
+}
