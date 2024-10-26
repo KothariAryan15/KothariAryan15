@@ -1,3 +1,5 @@
+Q 5 classes A, B, C, D, E....Hybrid inheritance
+
 #include <iostream>
 using namespace std;
 
