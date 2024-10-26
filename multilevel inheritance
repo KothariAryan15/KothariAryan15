@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+
+// Base class
+class Base {
+protected:
+    int num1; // First number
+
+public:
+    // Constructor to initialize num1
+    Base(int a) : num1(a) {}
+};
+
+// First derived class
+class Derived1 : public Base {
+protected:
+    int num2; // Second number
+
+public:
+    // Constructor to initialize num1 and num2
+    Derived1(int a, int b) : Base(a), num2(b) {}
+};
+
+// Second derived class
+class Derived2 : public Derived1 {
+public:
+    // Constructor
+    Derived2(int a, int b) : Derived1(a, b) {}
+
+    // Function to calculate the sum of num1 and num2
+    void sum() {
+        cout << "Sum of " << num1 << " and " << num2 << " is: " << (num1 + num2) << endl;
+    }
+};
+
+int main() {
+    int a, b;
+    cout << "Enter two numbers: ";
+    cin >> a >> b;
+
+    // Create an object of the second derived class
+    Derived2 obj(a, b);
+
+    // Call the sum function
+    obj.sum();
+
+    return 0;
+}
