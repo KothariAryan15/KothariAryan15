@@ -1,0 +1,73 @@
+#include <iostream>
+using namespace std;
+
+// Base class A
+class A {
+protected:
+    int valueA;
+
+public:
+    // Constructor to initialize valueA
+    A(int a) : valueA(a) {}
+};
+
+// Class B inheriting from A
+class B : public A {
+protected:
+    int valueB;
+
+public:
+    // Constructor to initialize valueA and valueB
+    B(int a, int b) : A(a), valueB(b) {}
+};
+
+// Class C inheriting from A
+class C : public A {
+protected:
+    int valueC;
+
+public:
+    // Constructor to initialize valueA and valueC
+    C(int a, int c) : A(a), valueC(c) {}
+};
+
+// Class D inheriting from A
+class D : public A {
+protected:
+    int valueD;
+
+public:
+    // Constructor to initialize valueA and valueD
+    D(int a, int d) : A(a), valueD(d) {}
+};
+
+// Class E inheriting from B
+class E : public B {
+private:
+    int valueE;
+
+public:
+    // Constructor to initialize valueA, valueB, and valueE
+    E(int a, int b, int e) : B(a, b), valueE(e) {}
+
+    // Function to display all values
+    void display() {
+        cout << "Value from A: " << valueA << endl;
+        cout << "Value from B: " << valueB << endl;
+        cout << "Value from E: " << valueE << endl;
+    }
+};
+
+int main() {
+    int a, b, e;
+    cout << "Enter values for A, B, and E: ";
+    cin >> a >> b >> e;
+
+    // Create an object of class E
+    E obj(a, b, e);
+
+    // Display the values
+    obj.display();
+
+    return 0;
+}
