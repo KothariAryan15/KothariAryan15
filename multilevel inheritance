@@ -1,4 +1,4 @@
-//Q:6:Display the sum of two numbers using multilevel inheritance where one number is declared in base class and one number declared in first derive class.Function is defined in the second derived class to sum two numbers
+//Q:Display the sum of two numbers using multilevel inheritance where one number is declared in base class and one number declared in first derive class.Function is defined in the second derived class to sum two numbers
 
 
 #include <iostream>
