@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+// Base class
+class Base {
+protected:
+    int num1, num2; // Protected members
+
+public:
+    // Constructor to initialize numbers
+    Base(int a, int b) : num1(a), num2(b) {}
+};
+
+// Derived class
+class Derived : public Base {
+public:
+    // Constructor
+    Derived(int a, int b) : Base(a, b) {}
+
+    // Function to calculate the product
+    void product() {
+        cout << "Product of " << num1 << " and " << num2 << " is: " << (num1 * num2) << endl;
+    }
+};
+
+int main() {
+    int a, b;
+    cout << "Enter two numbers: ";
+    cin >> a >> b;
+
+    // Create an object of Derived class
+    Derived obj(a, b);
+
+    // Call the product function
+    obj.product();
+
+    return 0;
+}
