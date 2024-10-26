@@ -1,4 +1,4 @@
-//Q:8:Using hierarchical inheritance where two numbers are declared in base class. Create one function in first derive class and one function in second derive class.First derive class displays the first number with the help of their function and the second derive class displays the second function with the help of their functio
+//Q:Using hierarchical inheritance where two numbers are declared in base class. Create one function in first derive class and one function in second derive class.First derive class displays the first number with the help of their function and the second derive class displays the second function with the help of their functio
 
 #include <iostream>
 using namespace std;
