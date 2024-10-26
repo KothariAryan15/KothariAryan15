@@ -6,17 +6,17 @@ using namespace std;
 
 class Sum {
 public:
-    // Constructor for summing two integers
+    
     Sum(int a, int b) {
         cout << "Sum of integers: " << (a + b) << endl;
     }
 
-    // Constructor for summing two floats
+  
     Sum(float a, float b) {
         cout << "Sum of floats: " << (a + b) << endl;
     }
 
-    // Constructor for concatenating two characters
+  
     Sum(char a, char b) {
         cout << "Concatenation of characters: " << a << b << endl;
     }
@@ -27,20 +27,20 @@ int main() {
     float float1, float2;
     char char1, char2;
 
-    // Input integers
+   
     cout << "Enter two integers: ";
     cin >> int1 >> int2;
-    Sum sumInt(int1, int2); // Calls integer sum constructor
+    Sum sumInt(int1, int2); 
 
-    // Input floats
+   
     cout << "Enter two floats: ";
     cin >> float1 >> float2;
-    Sum sumFloat(float1, float2); // Calls float sum constructor
+    Sum sumFloat(float1, float2);
 
-    // Input characters
+   
     cout << "Enter two characters: ";
     cin >> char1 >> char2;
-    Sum sumChar(char1, char2); // Calls character concatenation constructor
+    Sum sumChar(char1, char2); 
 
     return 0;
 }
