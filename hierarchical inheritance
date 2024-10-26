@@ -1,0 +1,53 @@
+#include <iostream>
+using namespace std;
+
+// Base class
+class Base {
+protected:
+    int num1; // First number
+    int num2; // Second number
+
+public:
+    // Constructor to initialize numbers
+    Base(int a, int b) : num1(a), num2(b) {}
+};
+
+// First derived class
+class Derived1 : public Base {
+public:
+    // Constructor to initialize the base class
+    Derived1(int a, int b) : Base(a, b) {}
+
+    // Function to display the first number
+    void displayNum1() {
+        cout << "First number: " << num1 << endl;
+    }
+};
+
+// Second derived class
+class Derived2 : public Base {
+public:
+    // Constructor to initialize the base class
+    Derived2(int a, int b) : Base(a, b) {}
+
+    // Function to display the second number
+    void displayNum2() {
+        cout << "Second number: " << num2 << endl;
+    }
+};
+
+int main() {
+    int a, b;
+    cout << "Enter two numbers: ";
+    cin >> a >> b;
+
+    // Create objects of the derived classes
+    Derived1 obj1(a, b);
+    Derived2 obj2(a, b);
+
+    // Call the functions to display the numbers
+    obj1.displayNum1();
+    obj2.displayNum2();
+
+    return 0;
+}
