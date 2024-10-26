@@ -9,7 +9,7 @@ private:
     int size;
 
 public:
-    // Parameterized constructor
+    
     ArraySum(int* inputArr, int s) {
         size = s;
         arr = new int[size];
@@ -18,7 +18,7 @@ public:
         }
     }
 
-    // Copy constructor
+   
     ArraySum(const ArraySum& other) {
         size = other.size;
         arr = new int[size];
@@ -27,7 +27,7 @@ public:
         }
     }
 
-    // Function to calculate the sum of positive numbers
+    
     int sumOfPositive() {
         int sum = 0;
         for (int i = 0; i < size; i++) {
@@ -38,7 +38,7 @@ public:
         return sum;
     }
 
-    // Destructor
+    
     ~ArraySum() {
         delete[] arr;
     }
@@ -55,15 +55,15 @@ int main() {
         cin >> inputArr[i];
     }
 
-    // Create an object using the parameterized constructor
+    
     ArraySum original(inputArr, n);
 
-    // Create a copy of the original object
+    
     ArraySum copy = original;
 
-    // Display the sum of positive numbers
+    
     cout << "Sum of all positive numbers in the array: " << copy.sumOfPositive() << endl;
 
-    delete[] inputArr; // Clean up dynamic memory
+    delete[] inputArr; 
     return 0;
 }
