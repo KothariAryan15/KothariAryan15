@@ -1,0 +1,67 @@
+#include <iostream>
+using namespace std;
+
+class ArraySum {
+private:
+    int* arr;
+    int size;
+
+public:
+    // Parameterized constructor
+    ArraySum(int* inputArr, int s) {
+        size = s;
+        arr = new int[size];
+        for (int i = 0; i < size; i++) {
+            arr[i] = inputArr[i];
+        }
+    }
+
+    // Copy constructor
+    ArraySum(const ArraySum& other) {
+        size = other.size;
+        arr = new int[size];
+        for (int i = 0; i < size; i++) {
+            arr[i] = other.arr[i];
+        }
+    }
+
+    // Function to calculate the sum of positive numbers
+    int sumOfPositive() {
+        int sum = 0;
+        for (int i = 0; i < size; i++) {
+            if (arr[i] > 0) {
+                sum += arr[i];
+            }
+        }
+        return sum;
+    }
+
+    // Destructor
+    ~ArraySum() {
+        delete[] arr;
+    }
+};
+
+int main() {
+    int n;
+    cout << "Enter the number of elements: ";
+    cin >> n;
+
+    int* inputArr = new int[n];
+    cout << "Enter the elements: ";
+    for (int i = 0; i < n; i++) {
+        cin >> inputArr[i];
+    }
+
+    // Create an object using the parameterized constructor
+    ArraySum original(inputArr, n);
+
+    // Create a copy of the original object
+    ArraySum copy = original;
+
+    // Display the sum of positive numbers
+    cout << "Sum of all positive numbers in the array: " << copy.sumOfPositive() << endl;
+
+    delete[] inputArr; // Clean up dynamic memory
+    return 0;
+}
