@@ -1,24 +1,29 @@
+//Q1:- Dispaly the sum of first n natural numbers using default constructor.
+
 #include <iostream>
 using namespace std;
 
-class NaturalNumbers {
-public:
-    NaturalNumbers(int n) {
-        int sum = 0;
-        for (int i = 1; i <= n; ++i) {
-            sum += i;
+class A{
+    public:
+        int n;
+        int s;
+        int i;  
+
+    A()
+    {
+        n=5;
+        s=0;
+        i=1;
+
+        for(i=1;i<=n;i++)
+        {
+            s=s+i;
         }
-        cout << "Sum of first " << n << " natural numbers is: " << sum << endl;
+        cout<<"sum of"<<n<<"natural numbers:"<<s;
     }
 };
-
-int main() {
-    int n;
-    cout << "Enter a positive integer: ";
-    cin >> n;
-
-    // Create an object of NaturalNumbers, which will compute the sum
-    NaturalNumbers obj(n);
-
-    return 0;
-}
+    int main()
+    {
+        A ob;
+        return 0;
+    }
