@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+class Swapper {
+public:
+    // Parameterized constructor to swap the values
+    Swapper(int a, int b) {
+        cout << "Before swapping: a = " << a << ", b = " << b << endl;
+        
+        // Swapping
+        int temp = a;
+        a = b;
+        b = temp;
+
+        cout << "After swapping: a = " << a << ", b = " << b << endl;
+    }
+};
+
+int main() {
+    int num1, num2;
+    cout << "Enter two numbers: ";
+    cin >> num1 >> num2;
+
+    // Create an object of Swapper which will swap the numbers
+    Swapper swapper(num1, num2);
+
+    return 0;
+}
