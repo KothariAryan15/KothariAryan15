@@ -1,4 +1,4 @@
-Q:- Dispaly the sum of first n natural numbers using default constructor.
+ Q:- Dispaly the sum of first n natural numbers using default constructor.
 
 #include <iostream>
 using namespace std;
